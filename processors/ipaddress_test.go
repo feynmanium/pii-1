@@ -27,14 +27,14 @@ func TestIPAddress_Process(t *testing.T) {
 			})
 		})
 
-		Convey(`And I have a valid IP4 address`, func() {
-			data := `192.168.1.1`
+		Convey(`And I have two valid IP4 addresses`, func() {
+			data := ` 192.168.1.1 127.0.0.1`
 
 			Convey(`When I call the Process method with the data`, func() {
 				result, err := processor.Process(data)
 
-				Convey(`Then the result will not be nil`, func() {
-					So(result, ShouldNotBeNil)
+				Convey(`Then the result FoundItems field will contain 2 items`, func() {
+					So(len(result.FoundResults), ShouldEqual, 2)
 				})
 
 				Convey(`Then the error will be nil`, func() {
