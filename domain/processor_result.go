@@ -13,11 +13,11 @@ type ProcessorResult struct {
 }
 
 type Item struct {
-	Type string `json:"itemType"`
+	Type     string `json:"itemType"`
 	Location *Location
 }
 
 type Location struct {
 	Column int
-	Row int64
+	Row    int64
 }

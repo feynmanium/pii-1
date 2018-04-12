@@ -6,5 +6,5 @@ type Response struct {
 	ItemCount  int64 `json:"item-count"`
 	IssueCount int64 `json:"issue-count"`
 	Format     string
-	Info []*ProcessorResult
+	Info       []*ProcessorResult `json:"info"`
 }

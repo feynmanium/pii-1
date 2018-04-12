@@ -1,8 +1,8 @@
 package domain_test
 
 import (
-	"testing"
 	"encoding/json"
+	"testing"
 
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/tyndyll/pii/domain"
@@ -18,7 +18,7 @@ func TestProcessorResult_Unmarshal(t *testing.T) {
 				"itemType": "Cell",
 				"location": {
 					"column": 5,
-					"row": 4,
+					"row": 4
 				},
 				"definition": [],
 				"attributes": {}
@@ -39,7 +39,7 @@ func TestProcessorResult_Unmarshal(t *testing.T) {
 
 			err := json.Unmarshal(testJSON, result)
 
-			Convey(`Then the error will be nil`, func(){
+			Convey(`Then the error will be nil`, func() {
 				So(err, ShouldBeNil)
 			})
 

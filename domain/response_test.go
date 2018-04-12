@@ -15,7 +15,11 @@ func TestResponse_Unmarshal(t *testing.T) {
 			"item-count": 123,
 			"issue-count": 456,
 			"format": "CSV",
-			"info": [],
+			"info": [
+				{
+					"processor": "Test Processor"
+				}
+			],
 			"warnings": [],
 			"errors": [],
 			"supplementary":[
@@ -54,6 +58,10 @@ func TestResponse_Unmarshal(t *testing.T) {
 
 			Convey(`Then the response Info should be populated with 1 item`, func() {
 				So(len(response.Info), ShouldEqual, 1)
+			})
+
+			Convey(`Then the response Info Processor should be set correctly`, func() {
+				So(response.Info[0].Name, ShouldEqual, "Test Processor")
 			})
 		})
 	})
