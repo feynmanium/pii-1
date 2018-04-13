@@ -46,7 +46,7 @@ all call the same endpoint
 
 The server provides a single binary which can provide both a HTTP server which could be used on a server or as the
 backend for an electron application. Using the Go plugin functionality means that anyone can write a Go (or C) shared
-library as a processor, using the example in the documentations (see [GoDoc](https://godoc.org/github.com/tyndyll/pii)),
+library as a processor, using the example in the documentations (see [GoDoc](https://godoc.org/github.com/tyndyll/pii/domain)),
 place it in a directory and have it automatically picked up and made available. This could effectively create a
 marketplace for shared libraries where processors could be made available by anyone to users. It also means that the
 default processors that I have created (ipaddress, name and national-insurance) could be replaced by better, versions
