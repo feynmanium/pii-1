@@ -1,4 +1,4 @@
-package processors_test
+package main
 
 import (
 	"testing"
@@ -28,7 +28,7 @@ func TestIPAddress_Process(t *testing.T) {
 		})
 
 		Convey(`And I have two valid IP4 addresses`, func() {
-			data := ` 192.168.1.1 127.0.0.1`
+			data := `192.168.1.1 127.0.0.1`
 
 			Convey(`When I call the Process method with the data`, func() {
 				result, err := processor.Process(data)

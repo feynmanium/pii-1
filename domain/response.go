@@ -7,4 +7,5 @@ type Response struct {
 	IssueCount int64 `json:"issue-count"`
 	Format     string
 	Info       []*ProcessorResult `json:"info"`
+	Error		[]*ProcessorResult `json:"error"`
 }
